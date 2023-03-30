@@ -1,7 +1,7 @@
 #include "bunny.h"
 #include <iostream>
 
-Bunny::Bunny(td::string name, SEX sex, COLOR color, int age, bool isRadioactiveVampireMutant)
+Bunny::Bunny(std::string name, SEX sex, COLOR color, int age, bool isRadioactiveVampireMutant)
 {
     this->name = name;
     this->sex = sex;
@@ -22,7 +22,27 @@ std::string Bunny::getName() const
 
 void Bunny::setName(const std::string &newName)
 {
- name = newName;
+    name = newName;
+}
+
+Bunny::SEX Bunny::getSex() const
+{
+    return sex;
+}
+
+void Bunny::setSex(SEX Sex)
+{
+    this->sex = sex;
+}
+
+Bunny::COLOR Bunny::getColor() const
+{
+    return color;
+}
+
+void Bunny::setColor(COLOR color)
+{
+    this->color = color;
 }
 
 int Bunny::getAge() const
@@ -49,3 +69,4 @@ void Bunny::incrementAge()
 {
     this->age++;
 }
+

@@ -17,13 +17,16 @@ public:
     ~Bunny();
     int getAge() const;
     void setAge(int age);
-
     bool getRadioactive() const;
     void setRadioactive(bool radioactive);
     void incrementAge();
-
     std::string getName() const;
     void setName(const std::string &newName);
+    SEX getSex() const;
+    void setSex(SEX newSex);
+
+    COLOR getColor() const;
+    void setColor(COLOR newColor);
 
 private:
     int age;
@@ -34,3 +37,4 @@ private:
 };
 
 #endif // BUNNY_H
+
