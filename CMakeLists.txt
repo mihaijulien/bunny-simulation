@@ -15,6 +15,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 add_executable(BunnySimulation
   main.cpp
   bunny.h bunny.cpp
+  simulation.h simulation.cpp
+  helper.h
 )
 target_link_libraries(BunnySimulation Qt${QT_VERSION_MAJOR}::Core)
 
