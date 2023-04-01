@@ -1,7 +1,7 @@
 #ifndef BUNNY_H
 #define BUNNY_H
 
-#include <string>
+#include <QString>
 
 class Bunny
 {
@@ -13,15 +13,15 @@ public:
         white, brown, black, spotted
     };
 
-    explicit Bunny(std::string name = "", SEX sex = male, COLOR color = white, int age = 0, bool isRadioactiveVampireMutant = false);
+    explicit Bunny(QString name = "", SEX sex = male, COLOR color = white, int age = 0, bool isRadioactiveVampireMutant = false);
     ~Bunny();
     int getAge() const;
     void setAge(int age);
     bool getRadioactive() const;
     void setRadioactive(bool radioactive);
     void incrementAge();
-    std::string getName() const;
-    void setName(const std::string &newName);
+    QString getName() const;
+    void setName(const QString &newName);
     SEX getSex() const;
     void setSex(SEX newSex);
 
@@ -33,8 +33,7 @@ private:
     bool isRadioactiveVampireMutant;
     SEX sex;
     COLOR color;
-    std::string name;
+    QString name;
 };
 
 #endif // BUNNY_H
-

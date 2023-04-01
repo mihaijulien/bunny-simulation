@@ -1,8 +1,8 @@
 #include "simulation.h"
 #include "helper.h"
-#include <iostream>
+#include <QDebug>
 
-std::vector<std::string> bunnyNames = {
+std::vector<QString> bunnyNames = {
     "Hopper", "Thumper", "Whiskers", "Baxter", "Roger",
     "Midnight", "Dawn", "Daisy", "Beatrix", "Dolly",
     "Twilight", "Pearl", "Ruby", "Diamond", "Misty",
@@ -28,7 +28,7 @@ void Simulation::display()
 {
     for(std::vector<Bunny>::iterator it = population.begin(); it != population.end(); ++it)
     {
-        std::cout<<"Bunny "<<it->getName()<<" was born!";
+        qInfo()<<"Bunny "<<it->getName()<<" was born!";
     }
 }
 

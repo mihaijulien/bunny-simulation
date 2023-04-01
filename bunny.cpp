@@ -1,7 +1,7 @@
 #include "bunny.h"
-#include <iostream>
+#include <QDebug>
 
-Bunny::Bunny(std::string name, SEX sex, COLOR color, int age, bool isRadioactiveVampireMutant)
+Bunny::Bunny(QString name, SEX sex, COLOR color, int age, bool isRadioactiveVampireMutant)
 {
     this->name = name;
     this->sex = sex;
@@ -12,15 +12,15 @@ Bunny::Bunny(std::string name, SEX sex, COLOR color, int age, bool isRadioactive
 
 Bunny::~Bunny()
 {
-    std::cout<<"Bunny "<< this->name <<" died!";
+    qInfo()<<"Bunny "<< this->name <<" died!";
 }
 
-std::string Bunny::getName() const
+QString Bunny::getName() const
 {
  return name;
 }
 
-void Bunny::setName(const std::string &newName)
+void Bunny::setName(const QString &newName)
 {
     name = newName;
 }
@@ -69,4 +69,3 @@ void Bunny::incrementAge()
 {
     this->age++;
 }
-
